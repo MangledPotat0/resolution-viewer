@@ -1,10 +1,20 @@
+# -*- coding: utf-8 -*-
+"""
+app.py
+
+Application for hosting my new year's resolution dashboard.
+"""
+
+# 3rd party module imports
 from dash import Dash
+
+# Local module imports
 from connection import db_connect
-from core.data_provider import DBDataProvider
 from core.chart_service import ChartService
+from core.data_provider import DBDataProvider
 from core.layout_service import LayoutService
-from dashboard.dashboard import Dashboard
 from dashboard.callbacks import register_callbacks
+from dashboard.dashboard import Dashboard
 
 app = Dash(__name__)
 
