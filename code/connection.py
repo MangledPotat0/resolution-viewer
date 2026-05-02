@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-app/db/connection.py
+connection.py
 Establishes connection to the postgreSQL database that stores all the data
 entries.
 """
@@ -40,6 +40,5 @@ def db_close(conn: connection) -> None:
     """
     if conn and not conn.closed:
         conn.close()
-
 
 # EOF
