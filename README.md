@@ -1,2 +1,2 @@
-# Dashboard
-![](code/dashboard.svg)
+Go see it
+https://maelstrom.works/plots.html
