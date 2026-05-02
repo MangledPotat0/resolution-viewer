@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: resolution-viewer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: resolution-viewer
+  template:
+    metadata:
+      labels:
+        app: resolution-viewer
+    spec:
+      containers:
+        - name: resolution-viewer
+          image: localhost:9999/resolution-viewer:latest
+          command: ["python", "app.py"]
+          ports:
+            - containerPort: 5050
+          envFrom:
+            - secretRef:
+                name: resolution-secret
